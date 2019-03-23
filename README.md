@@ -1,4 +1,4 @@
-Save kubernetes events to PostgreSQL
+### Save kubernetes events to PostgreSQL
 
 create table:
 ```sql
@@ -15,7 +15,7 @@ CREATE TABLE public.k8s_events (
 CREATE UNIQUE INDEX events_id_idx ON public.k8s_events USING btree (id);
 ```
 
-run kube-event-saver:
+Run kube-event-saver:
 ```sh
 export PGUSER=user
 export PGPASSWORD=xxxx
@@ -26,3 +26,9 @@ export KUBE_CONFIG=/some/path
 ./kube-event-saver
 ```
 
+Develop:
+
+1. put inside `$GO_HOME/go/src/github.com/paxa/kube-event-saver`
+2. `glide install`
+3. `go build`
+4. cross compile: `GOOS=linux GOARCH=amd64 go build main.go -o kube-event-saver`

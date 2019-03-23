@@ -1,5 +1,5 @@
 hash: 4f36a8f55f25b35337eed3519fcd8c7ad50a3fe41a5b8e3ca3b4920bd046ad2a
-updated: 2019-02-07T18:27:18.14211+08:00
+updated: 2019-03-23T19:09:07.273607+08:00
 imports:
 - name: github.com/davecgh/go-spew
   version: 782f4967f2dc4564575ca782fe2d04090b5faca8
@@ -40,6 +40,12 @@ imports:
   version: 7c29201646fa3de8506f701213473dd407f19646
 - name: github.com/jackc/pgx
   version: c59c9cac59ab95eceb0c12ff338923c62f411ea2
+  subpackages:
+  - chunkreader
+  - internal/sanitize
+  - pgio
+  - pgproto3
+  - pgtype
 - name: github.com/json-iterator/go
   version: ab8a2e0c74be9d3be70b3184d9acc634935ded82
 - name: github.com/kr/pretty
@@ -52,10 +58,12 @@ imports:
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
 - name: github.com/peterbourgon/diskv
   version: 5f041e8faa004a95c88a202771f4cc3e991971e6
+- name: github.com/pkg/errors
+  version: 27936f6d90f9c8e1145f11ed52ffffbfdb9e0af7
 - name: github.com/spf13/pflag
   version: 583c0c0531f06d5278b7d917446061adc344b5cd
 - name: github.com/spf13/viper
-  version: 6d33b5a963d922d182c91e8a1c88d81fd150cfd4
+  version: 9e56dacc08fbbf8c9ee2dbc717553c758ce42bc9
 - name: golang.org/x/crypto
   version: de0752318171da717af4ce24d0a2e8626afaeb11
   subpackages:
@@ -129,7 +137,6 @@ imports:
   - core/v1
   - events/v1beta1
   - extensions/v1beta1
-  - imagepolicy/v1alpha1
   - networking/v1
   - policy/v1beta1
   - rbac/v1
